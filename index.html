@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer" />
+            
+    <!-- Style -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Trang chủ - Phone Paradise</title>
+</head>
+<body>
+    <div class="header">
+        <a href="./index.html" class="logo">
+            <img src="./images/logo.png" alt="">
+        </a>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#products">Product</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="./order.html">Đặt Hàng <i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+        <div class="header-icons">
+            <a href="./register.html" id="add-user">
+                <i class="fa-solid fa-user-plus"></i>
+                <span>Đăng ký</span>
+            </a>
+            <a href="./php/userManagement.php" id="edit-user">
+                <i class="fa-solid fa-user-pen"></i>
+                <span>Sửa và xóa</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="home" id="home">
+        <img src="./images/slider1.png">
+        <div onclick="prev()" class="prev-btn"><i class="fa-solid fa-chevron-left"></i></div>
+        <div onclick="next()" class="next-btn"><i class="fa-solid fa-chevron-right"></i></div>
+        <span class="pagination"><span class="img-position">1</span>/15</span>
+    </div>
+
+    <div class="categories" id="categories">
+        <div class="row-top">
+            <div class="heading">Categories</div>
+            <a href="#products" class="btn">
+                Tất cả
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="categories-container">
+            <a href="#products" class="box box-1">
+                <img src="./images/cate1.png" alt="">
+                <h2>Samsung</h2>
+                <span>Hàn Quốc</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#products" class="box box-2">
+                <img src="./images/cate2.png" alt="">
+                <h2>Xiaomi</h2>
+                <span>Trung Quốc</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#products" class="box box-3">
+                <img src="./images/cate3.png" alt="">
+                <h2>Apple</h2>
+                <span>Mỹ</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#products" class="box box-4">
+                <img src="./images/cate4.png" alt="">
+                <h2>Oppo</h2>
+                <span>Trung Quốc</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#products" class="box box-4">
+                <img src="./images/cate5.png" alt="">
+                <h2>Realme</h2>
+                <span>Trung Quốc</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="products" id="products">
+        <div class="row-top">
+            <div class="heading">Products</div>
+            <a href="./order.html" class="btn">
+                Đặt hàng
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="products-container">
+            <a href="./details.html" class="box">
+                <img src="./images/sp1.png" alt="">
+                <span>Samsung</span>
+                <h2>Galaxy S22 Ultra</h2>
+                <h3 class="price">17.990.000đ</h3>
+                <i class="fa-regular fa-heart"></i>
+                <span class="discount">-20%</span>
+            </a>
+            <a href="./details.html" class="box">
+                <img src="./images/sp2.png" alt="">
+                <span>Apple</span>
+                <h2>iPhone 14 Pro Max</h2>
+                <h3 class="price">24.450.000đ</h3>
+                <i class="fa-regular fa-heart"></i>
+                <span class="discount">-20%</span>
+            </a>
+            <a href="./details.html" class="box">
+                <img src="./images/sp3.png" alt="">
+                <span>Oppo</span>
+                <h2>Reno8 T 5G</h2>
+                <h3 class="price">9.290.000đ</h3>
+                <i class="fa-regular fa-heart"></i>
+                <span class="discount">-20%</span>
+            </a>
+            <a href="./details.html" class="box">
+                <img src="./images/sp4.png" alt="">
+                <span>Realme</span>
+                <h2>Realme 10</h2>
+                <h3 class="price">5.390.000đ</h3>
+                <i class="fa-regular fa-heart"></i>
+                <span class="discount">-20%</span>
+            </a>
+            <a href="./details.html" class="box">
+                <img src="./images/sp5.png" alt="">
+                <span>Xiaomi </span>
+                <h2>Xiaomi Redmi Note 12</h2>
+                <h3 class="price">4.090.000đ</h3>
+                <i class="fa-regular fa-heart"></i>
+                <span class="discount">-20%</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="about" id="about">
+
+        <div class="col-left">
+            <img src="./images/about.png" alt="">
+        </div>
+
+        <div class="col-right">
+            <span class="title">About <i>Us</i></span>
+            <h2>Phone Paradise</h2>
+            <p>
+                Phone Paradise là một trang web bán smartphone chuyên nghiệp, 
+                được thiết kế để mang đến cho khách hàng trải nghiệm mua sắm trực tuyến tốt nhất 
+                và đáp ứng mọi nhu cầu của họ liên quan đến điện thoại di động. 
+                Với đội ngũ nhân viên giàu kinh nghiệm và chuyên môn, 
+                chúng tôi cam kết cung cấp cho khách hàng các sản phẩm chất lượng cao và dịch vụ tốt nhất.
+                 Tại Phone Paradise, chúng tôi luôn đặt sự hài lòng của khách hàng lên hàng đầu 
+                 và sẵn sàng hỗ trợ khách hàng bất cứ lúc nào. Đến với Phone Paradise, 
+                 bạn sẽ tìm thấy điện thoại mình yêu thích và trải nghiệm một dịch vụ mua sắm trực tuyến tuyệt vời.
+            </p>
+        </div>
+    </div>
+
+    <div class="contact" id="contact">
+        <div class="heading">Contact Info</div>
+        <div class="contact-container">
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div class="item-text">
+                    <h2>Phone</h2>
+                    <span>(+84) 399484042</span>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div class="item-text">
+                    <h2>Email</h2>
+                    <span>htvuong202@gmail.com</span>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <div class="item-text">
+                    <h2>Address</h2>
+                    <span>70 Tô Ký, Quận 12, TP.HCM</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="shop-name"><span>P</span>HONE &nbsp;<span>P</span>ARADISE</div>
+        <div class="social-media">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <p>&copy; Sản phẩm của Huỳnh Tấn Vương - Đinh Văn Long Vũ</p>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
+

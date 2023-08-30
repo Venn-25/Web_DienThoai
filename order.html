@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer" />
+            
+    <!-- Style -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Đặt hàng - Phone Paradise</title>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="logo">
+            <img src="./images/logo.png" alt="">
+        </a>
+        <ul class="navbar">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./index.html">Categories</a></li>
+            <li><a href="./index.html">Product</a></li>
+            <li><a href="./index.html">About</a></li>
+            <li><a href="./index.html">Contact</a></li>
+            <li><a href="./order.html">Đặt Hàng <i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+        <div class="header-icons">
+            <a href="./register.html" id="add-user">
+                <i class="fa-solid fa-user-plus"></i>
+                <span>Đăng ký</span>
+            </a>
+            <a href="./php/userManagement.php" id="edit-user">
+                <i class="fa-solid fa-user-pen"></i>
+                <span>Sửa và xóa</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <h2>BÁN HÀNG</h2>
+        <select name="price-level" id="price-level" onchange="priceLevel()">
+            <option value="">Mức giá</option>
+            <option value="1">Dưới 5 triệu</option>
+            <option value="2">Từ 5 đến 12 triệu</option>
+            <option value="3">Từ 12 đến 20 triệu</option>
+            <option value="4">Từ 20 đến 30 triệu</option>
+        </select>
+        <hr>
+        <table>
+            <tr>
+                <th><input type="checkbox" id="checked-all"></th>
+                <th>Hàng hóa</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+            </tr>
+            <tr>
+                <td><input class="choose" type="checkbox" onchange="productsUnable(this)"></td>
+                <td class="name">Galaxy S22 Ultra</td>
+                <td class="price">17990000</td>
+                <td><input class="qty" type="text" placeholder="0" disabled onkeyup="quantityChange(this)"></td>
+                <td class="sum-price"></td>
+            </tr>
+            <tr>
+                <td><input class="choose" type="checkbox" onchange="productsUnable(this)"></td>
+                <td class="name">iPhone 14 Pro Max</td>
+                <td class="price">24450000</td>
+                <td><input class="qty" type="text" placeholder="0" disabled onkeyup="quantityChange(this)"></td>
+                <td class="sum-price"></td>
+            </tr>
+            <tr>
+                <td><input class="choose" type="checkbox" onchange="productsUnable(this)"></td>
+                <td class="name">Reno8 T 5G</td>
+                <td class="price">9290000</td>
+                <td><input class="qty" type="text" placeholder="0" disabled onkeyup="quantityChange(this)"></td>
+                <td class="sum-price"></td>
+            </tr>
+            <tr>
+                <td><input class="choose" type="checkbox" onchange="productsUnable(this)"></td>
+                <td class="name">Realme 10</td>
+                <td class="price">5390000</td>
+                <td><input class="qty" type="text" placeholder="0" disabled onkeyup="quantityChange(this)"></td>
+                <td class="sum-price"></td>
+            </tr>
+            <tr>
+                <td><input class="choose" type="checkbox" onchange="productsUnable(this)"></td>
+                <td class="name">Xiaomi Redmi Note 12</td>
+                <td class="price">4090000</td>
+                <td><input class="qty" type="text" placeholder="0" disabled onkeyup="quantityChange(this)"></td>
+                <td class="sum-price"></td>
+            </tr>
+            <tr>
+                <td><input class="choose" type="checkbox" onchange="productsUnable(this)"></td>
+                <td class="name">Samsung Galaxy S20 FE</td>
+                <td class="price">7250000</td>
+                <td><input class="qty" type="text" placeholder="0" disabled onkeyup="quantityChange(this)"></td>
+                <td class="sum-price"></td>
+            </tr>
+            <tr>
+                <td><input class="choose" type="checkbox" onchange="productsUnable(this)"></td>
+                <td class="name">Xiaomi 12T</td>
+                <td class="price">9890000</td>
+                <td><input class="qty" type="text" placeholder="0" disabled onkeyup="quantityChange(this)"></td>
+                <td class="sum-price"></td>
+            </tr>
+            <tr>
+                <td><input class="choose" type="checkbox" onchange="productsUnable(this)"></td>
+                <td class="name">iPhone 11</td>
+                <td class="price">10550000</td>
+                <td><input class="qty" type="text" placeholder="0" disabled onkeyup="quantityChange(this)"></td>
+                <td class="sum-price"></td>
+            </tr>
+            <tr>
+                <td><input class="choose" type="checkbox" onchange="productsUnable(this)"></td>
+                <td class="name">Realme 11</td>
+                <td class="price">7190000</td>
+                <td><input class="qty" type="text" placeholder="0" disabled onkeyup="quantityChange(this)"></td>
+                <td class="sum-price"></td>
+            </tr>
+            <tr>
+                <td><input class="choose" type="checkbox" onchange="productsUnable(this)"></td>
+                <td class="name">Samsung Galaxy Z Flip4</td>
+                <td class="price">14990000</td>
+                <td><input class="qty" type="text" placeholder="0" disabled onkeyup="quantityChange(this)"></td>
+                <td class="sum-price"></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center; font-weight: bold;">Tổng</td>
+                <td class="total" style="font-weight: bold;"></td>
+            </tr>
+        </table>
+    </div>
+    
+
+    <div class="footer">
+        <div class="shop-name"><span>P</span>HONE &nbsp;<span>P</span>ARADISE</div>
+        <div class="social-media">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <p>&copy; Sản phẩm của Huỳnh Tấn Vương - Đinh Văn Long Vũ</p>
+    </div>
+
+    <script src="./js/order.js"></script>
+</body>
+</html>
+
